@@ -11,25 +11,6 @@ import numpy as onp
 from typing import Tuple
 import functools
 
-## TODO: set up experiments
-## EXPERIMENT 1: compare mengdi architecture to barron to random feature
-## compare mengdi architecture to barron to random feature
-## (implement mengdi architecture)
-## (could try this both correctly specified in terms of knowledge of lower-dimension)
-## can do this on flower mapped to higher-d as start
-
-## EXPERIMENT 2: product of independent components
-## don't need to compare to mengdi, can compare RF to barron
-## product of independent components in high-dimensional space => sum of low-dimensional barron scores
-## - could do product of 1d gaussian mixtures
-
-## EXPERIMENT 3: MNIST
-## compare a shallow net (barron) to the top k principal components
-
-## EXPERIMENT 4: testing the middle region
-## try optimizing over the covariance of the noise in the interpolant and see if it
-## makes a difference compared to pure barron
-
 
 @functools.partial(jax.jit, static_argnums=0)
 def sample_gmm(
